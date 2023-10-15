@@ -26,6 +26,11 @@ router.post("/api/books/",(req,res)=>{
     });
     res.send("book created successfully");
 
+});
+
+router.put("/api/books/:id",(req,res)=>{
+   const params = req.params;
+   console.log(params);
 })
 
 module.exports = router;
