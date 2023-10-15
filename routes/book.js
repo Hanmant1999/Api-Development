@@ -34,9 +34,10 @@ const books = [
 
 
 
-router.get("/",(req,res)=>{
+/* router.get("/",(req,res)=>{
     res.send("Hello World");
 });
+*/
 
 // to get all the books 
 router.get("/",(req,res)=>{
