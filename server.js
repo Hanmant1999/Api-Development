@@ -4,8 +4,9 @@ const app = new express();
 const bookRouter = require("./routes/book");
 
 const PORT = 8080 ;
+app.use("/api/books", bookRouter);
 app.listen(PORT,()=>{
-    console.log(`server is running on port no. ${process.env.port}`);
+    console.log(`server is running on port no. ${8080}`);
 });
 
 const logger = (req,res,next)=>{
@@ -15,37 +16,6 @@ const logger = (req,res,next)=>{
 };
 
 app.use(logger);
-
-const books = [
-    {
-        id:1,
-        title: "Harry POTTER",
-        AUTHOR:"j.k.rOWLING",
-        year:1998,
-        pages:251,
-        publisher:"BloomSubry",
-        language:"English"
-    },
-    {   
-        id:2,
-        title: "Harry Potter2",
-        AUTHOR:"j.k.rOWLING",
-        year:1998,
-        pages:251,
-        publisher:"BloomSubry",
-        language:"English"
-    },
-    {   
-        id:3,
-        title: "Harry Potter 3",
-        AUTHOR:"j.k.rOWLING",
-        year:1998,
-        pages:251,
-        publisher:"BloomSubry",
-        language:"English"
-    }
-]
-
 app.use(express.json());
 
-app.use(PORT, bookRouter);
+
