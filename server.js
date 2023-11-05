@@ -16,6 +16,8 @@ app.listen(PORT,()=>{
     console.log(`server is running on port no. ${8080}`);
 });
 
+app.use("/",express.static(__dirname,"public"));
+
 const logger = (req,res,next)=>{
     console.log(`recieved the ${req.method} on ${req.url}`);
     // res.send(books);
