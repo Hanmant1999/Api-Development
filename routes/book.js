@@ -36,12 +36,6 @@ const books = [
 ];
 
 
-
-/* router.get("/",(req,res)=>{
-    res.send("Hello World");
-});
-*/
-
 // to get all the books 
 router.get("/",(req,res)=>{
     res.send(books);
@@ -61,7 +55,6 @@ router.post("/",(req,res)=>{
         id
     });
     res.send("book created successfully");
-
 });
 
 router.put("/:id",(req,res)=>{
