@@ -10,7 +10,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log("Connected to MongoDB");
   });
 app.use("/api/books", bookRouter);
-app.use("api/users",userRouter);
+app.use("/api/users",userRouter);
 
 app.listen(PORT,()=>{
     console.log(`server is running on port no. ${8080}`);
